@@ -9,8 +9,8 @@
 <link rel="stylesheet" type="text/css" id="stylesheet-print"               href="https://stylesheets.bhstudios.org/assets/v2/basics/print.css" />
 <link rel="stylesheet" type="text/css" id="framework-stylesheet"           href="https://stylesheets.bhstudios.org/assets/v2/neon/neon-renderer.css" />
 <link rel="stylesheet" type="text/css" id="theme-stylesheet"               href="{{ site.default-neon-theme-url | default: 'https://stylesheets.bhstudios.org/assets/v2/neon/neon-water.css' }}" />
-{%- for customTheme in site.neon.customThemes %}
-<link rel="stylesheet" type="text/css" id="custom-theme-stylesheet-{{ customTheme.tag }}" href="{{ customTheme.url | default: 'Custom theme missing required field `url`!' }}" />
+{%- for custom-theme in site.custom-themes %}
+<link rel="stylesheet" type="text/css" id="custom-theme-stylesheet-{{ custom-theme.tag }}" href="{{ custom-theme.url | default: 'Custom theme missing required field `url`!' }}" />
 {%- endfor %}
 
 
